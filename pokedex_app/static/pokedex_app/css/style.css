@@ -1,0 +1,39 @@
+/*
+Root variables for consistent color theming.
+*/
+:root {
+    --link-color: #000;
+    --font-color-yellow: #ffcb05;
+    --background-blue-color: #066bc6;
+}
+
+/*
+Styles for the todo class.
+*/
+.todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    gap: 20px;
+}
+
+/*
+Basic styles for the entire body of the page.
+*/
+body {
+    width: 100vw;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    line-height: 1;
+}
+
+/*
+Styles for hyperlinks (anchor tags) to provide consistent styling.
+*/
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}

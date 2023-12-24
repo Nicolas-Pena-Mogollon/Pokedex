@@ -1,0 +1,27 @@
+<!-- table_pagination.html -->
+<!--
+    This template defines the pagination section for navigating through multiple table pages of a Pokémon list.
+    It includes links to the first, previous, next, and last pages, along with information about the current page.
+-->
+<div class="pagination">
+    <span class="step__links">
+        {% if pokemon_list.has_previous %}
+            <!-- Link to the first page -->
+            <a class="pagination_arrow" href="?page=1">first</a>
+            <!-- Link to the previous page -->
+            <a class="pagination_arrow" href="?page={{ pokemon_list.previous_page_number }}">&laquo; previous</a>
+        {% endif %}
+
+        <!-- Display information about the current page -->
+        <span class="current">
+            Página {{ pokemon_list.number }} de {{ pokemon_list.paginator.num_pages }}
+        </span>
+
+        {% if pokemon_list.has_next %}
+            <!-- Link to the next page -->
+            <a class="pagination_arrow" href="?page={{ pokemon_list.next_page_number }}">next &raquo;</a>
+            <!-- Link to the last page -->
+            <a class="pagination_arrow" href="?page={{ pokemon_list.paginator.num_pages }}">last</a>
+        {% endif %}
+    </span>
+</div>

@@ -1,0 +1,13 @@
+<!-- pokemon_weight.html -->
+<!--
+    This HTML template extends the base 'index.html' template for the Pokémon application.
+    It specifies a custom title for the page and includes the structure for displaying Pokémon based on weight range.
+-->
+{% extends 'pokedex_app/index.html' %}
+
+{% block title %}Pokemon por Rango de Peso{% endblock %}
+
+{% block content %}
+    <h1 class="table__title">Pokemon List</h1>
+    {% include 'pokedex_app/layouts/pokemon_list_structure.html' with pokemon_list=filtered_pokemon %}
+{% endblock %}

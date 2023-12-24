@@ -1,0 +1,46 @@
+/*
+Styles for the entire navbar.
+*/
+.navbar {
+    width: 100vw;
+}
+
+/*
+Styles for the list within the navbar.
+*/
+.navbar__list {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*
+Styles for each navigation link.
+*/
+.nav__link {
+    font-weight: bold;
+    color: var(--font-color-yellow);
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+/*
+Styles for the Pokedex link
+*/
+.navbar__title {
+    font-weight: normal;
+    font-size: 30px;
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+/*Mobile*/
+@media (max-width: 500px) {
+    /*
+        Styles for the list within the navbar on mobile devices.
+    */
+    .navbar__list {
+        flex-direction: column;
+    }
+}

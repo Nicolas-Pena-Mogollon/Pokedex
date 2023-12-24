@@ -1,0 +1,32 @@
+<!-- pokemon_reversed_names.html -->
+<!--
+    This HTML template extends the base 'index.html' template for the Pokémon application.
+    It specifies a custom title for the page and includes the structure for displaying Pokémon names in reverse order.
+-->
+{% extends 'pokedex_app/index.html' %}
+
+{% block title %}Nombres Inversos de Pokémon{% endblock %}
+
+{% block content %}
+    <h1 class="table__title">Nombres Inversos de Pokémon</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Nombre Inverso</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for pokemon in reversed_pokemones %}
+            <tr>
+                <td>{{ pokemon.id }}</td>
+                <td>{{ pokemon.name }}</td>
+                <td>{{ pokemon.reverse_name }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% include 'pokedex_app/layouts/table_pagination.html' with pokemon_list=reversed_pokemones %}
+
+{% endblock %}

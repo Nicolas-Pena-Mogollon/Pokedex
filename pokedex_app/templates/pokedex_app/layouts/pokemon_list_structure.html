@@ -1,0 +1,31 @@
+<!-- pokemon_list_structure.html -->
+<!--
+    This template defines the structure for displaying a list of Pokémon in a table format.
+    It includes columns for ID, Name, Type(s), Height, and Weight.
+-->
+<table class="table">
+    <thead>
+    <!-- Table header with column names -->
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Tipo(s)</th>
+        <th>Altura</th>
+        <th>Peso</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Loop through each Pokémon in the list and display its information in a table row -->
+    {% for pokemon in pokemon_list %}
+        <tr>
+            <td>{{ pokemon.id }}</td>
+            <td>{{ pokemon.name }}</td>
+            <td>{{ pokemon.types|join:", " }}</td>
+            <td>{{ pokemon.height }}</td>
+            <td>{{ pokemon.weight }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<!-- Include pagination section for navigating through multiple table pages -->
+{% include 'pokedex_app/layouts/table_pagination.html' %}

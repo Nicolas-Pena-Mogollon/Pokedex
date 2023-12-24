@@ -1,0 +1,52 @@
+/*
+Styles for the pages legend
+*/
+.current {
+    font-weight: bold;
+}
+
+/*
+Styles for the table pagination arrow.
+*/
+.pagination_arrow {
+    color: var(--font-color-yellow);
+    background-color: var(--background-blue-color);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+/*
+Styles for the step links within the pagination row.
+*/
+.step__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+/*Mobile*/
+@media (max-width: 500px) {
+
+    /*
+    Styles for the pages legend
+    */
+    .current {
+        font-size: 14px;
+    }
+
+    /*
+    Styles for the step links within the pagination row.
+    */
+    .step__links {
+        gap: 5px;
+    }
+
+    /*
+    Styles for the table pagination arrow.
+    */
+    .pagination_arrow {
+        font-size: 12px;
+        padding: 3px;
+    }
+}

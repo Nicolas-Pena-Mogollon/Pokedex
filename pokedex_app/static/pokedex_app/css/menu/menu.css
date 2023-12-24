@@ -1,0 +1,26 @@
+/*
+Styles for the menu section.
+*/
+.menu__section {
+    background-color: var(--background-blue-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+/*
+Styles for the logo within the menu section.
+*/
+.logo {
+    text-align: center;
+    width: 100vw;
+}
+
+/*
+Styles for the logo image.
+*/
+.logo img {
+    height: 10vh;
+}
