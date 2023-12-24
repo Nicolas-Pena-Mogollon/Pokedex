@@ -1,3 +1,5 @@
+## Autor: Nicolás Peña Mogollón
+
 # Nombre del Proyecto
 
 Solución prueba técnica HP
